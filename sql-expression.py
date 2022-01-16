@@ -17,7 +17,7 @@ artist_table = Table(
 
 # create variable for Album table
 album_table = Table(
-    "Album", meta, 
+    "Album", meta,
     Column("AlbumId", Integer, primary_key=True),
     Column("Title", String),
     Column("ArtistId", Integer, ForeignKey("artist_table.ArtistId"))
@@ -58,7 +58,7 @@ with db.connect() as connection:
     # Query 5 - Select only "ArtistId" #51 form the "Album" table
     # select_query = album_table.select().where(album_table.c.ArtistId == 51)
 
-    # Query 5 - Select only "composer" "Queen" form the "Track" table
+    # Query 6 - Select only "composer" "Queen" form the "Track" table
     select_query = track_table.select().where(
         track_table.c.Composer == "Queen")
 
