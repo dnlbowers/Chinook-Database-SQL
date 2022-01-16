@@ -84,5 +84,4 @@ for track in tracks:
           track.Milliseconds,
           track.Bytes,
           track.UnitPrice,
-          sep=" | "
-    )
+          sep=" | ")
